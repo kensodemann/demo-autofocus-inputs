@@ -1,0 +1,7 @@
+{
+  "name": "demo-autofocus-inputs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
