@@ -4,15 +4,16 @@ import { IonInput } from '@ionic/angular';
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
-  styleUrls: ['./details.page.scss'],
+  styleUrls: ['./details.page.scss']
 })
 export class DetailsPage implements AfterViewInit {
-  @ViewChild(IonInput, { static: true }) firstInput;
+  @ViewChild('focusMe', { static: true }) firstInput;
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit() {
-    console.log('after view init the details view', this.firstInput);
-    this.firstInput.setFocus();
+    setTimeout(() => {
+      this.firstInput.nativeElement.focus();
+    });
   }
 }
